@@ -21,7 +21,11 @@ namespace TrabalhandoComObjetos
             conta2.Depositar(100);           
             saldo = conta2.ExibirExtrato();
 
-           
+            conta1.Depositar(-500);
+
+           conta1.Transferencia(conta2, 3500);
+                    
+            conta1.Sacar(45500);
 
         }
         static void TestandoCarros()

@@ -9,6 +9,7 @@ git commit -m " " >Realizando o commit
 git push -u origin master(main) > enviando para o repositório remoto
 
 ctrl+k+d > indentação do codigo.
+F11 entra no detalhes debugando
 
 13/01/2022 
 Aula 07

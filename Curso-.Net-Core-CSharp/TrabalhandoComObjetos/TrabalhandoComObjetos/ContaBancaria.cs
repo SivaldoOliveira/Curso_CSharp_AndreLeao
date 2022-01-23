@@ -20,16 +20,14 @@ namespace TrabalhandoComObjetos
         {           
             Email = email;
             
-        }
-                
+        }                
         public ContaBancaria( string nome, string cpf)
             :this()
         {  
           
             Nome = nome;
             CPF = cpf;
-        }
-              
+        }              
 
         private ContaBancaria()
         {
@@ -38,7 +36,6 @@ namespace TrabalhandoComObjetos
             ProximoCodigoDaConta();
 
         }
-
         private void ProximoCodigoDaConta()
         {
             ProximoCodigo += 1;
@@ -49,15 +46,30 @@ namespace TrabalhandoComObjetos
             var info = $"Codigo: {Codigo}, Nome do cliente: {Nome}";
             return info;
         }
-
         public void Depositar(double valor)
         {
-            Saldo += valor;
+            if (valor > 0)
+            {
+                Saldo += valor;
+            }            
+        }
+        public bool Sacar(double valor)
+        {
+            if(Saldo >= valor && valor > 0)
+            {
+                Saldo -= valor;
+                return true;
+            }
+           return false;
         }
 
-        public void Sacar(double valor)
+        public void Transferencia (ContaBancaria conta , double valor)
         {
-            Saldo -= valor;
+           var saqueRealizado = this.Sacar(valor);
+            if (saqueRealizado)
+            {
+                conta.Depositar(valor);
+            }
         }
 
         public double ExibirExtrato()
