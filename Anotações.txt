@@ -1,0 +1,20 @@
+Comandos Git
+ git init > iniciando o repositório
+git remote add origin https://github.com/SivaldoOliveira/Curso-.Net-Core-CSharp.git
+
+git add. > adicionando os arquivos ao Git.
+
+git commit -m " " >Realizando o commit
+
+git push -u origin master(main) > enviando para o repositório remoto
+
+ctrl+k+d > indentação do codigo.
+
+13/01/2022 
+Aula 07
+Aula 08
+Aula 09
+Aula 10 16/01/2022
+Aula 11 
+Aula 12 17/01/2022
+Aula 13  22/01/2022
