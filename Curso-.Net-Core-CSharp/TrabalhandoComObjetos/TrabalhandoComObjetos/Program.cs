@@ -6,27 +6,36 @@ namespace TrabalhandoComObjetos
     {
         static void Main(string[] args)
         {
-         TestandoContas();
+            TestandoContas();
         }
 
         static void TestandoContas()
         {
-          var conta1 = new ContaBancaria("Sivaldo", "sivaldo@sivaldo", "939163368757");      
-            conta1.Depositar(100);
-            var saldo = conta1.ExibirExtrato();
 
-       
+            try
+            {
+                var conta1 = new ContaBancaria("Sivaldo", "sivaldo@sivaldo", "939163368757");
+                conta1.Depositar(100);
+                var saldo = conta1.ExibirExtrato();
 
-            var conta2 = new ContaBancaria("Mauriza","maruiza@riu", "45245245245");
-            conta2.Depositar(100);           
-            saldo = conta2.ExibirExtrato();
 
-            conta1.Depositar(-500);
 
-           conta1.Transferencia(conta2, 3500);
-                    
-            conta1.Sacar(45500);
+                var conta2 = new ContaBancaria("Mauriza", "maruiza@riu", "45245245245");
+                conta2.Depositar(100);
+                saldo = conta2.ExibirExtrato();
 
+                conta1.Depositar(-500);
+
+                conta1.Transferencia(conta2, 3500);
+
+                conta1.Sacar(45500);
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         static void TestandoCarros()
         {
@@ -55,9 +64,6 @@ namespace TrabalhandoComObjetos
             velocidade = carro1.ExibirVelocidadeAtual();
 
         }
-
-
-
         static void ExemploClientes()
         {
             var cliente1 = new Cliente();
