@@ -2,7 +2,7 @@
 
 namespace TrabalhandoComObjetos
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -25,13 +25,16 @@ namespace TrabalhandoComObjetos
                 saldo = conta2.ExibirExtrato();
 
                 conta1.Depositar(-500);
-
                 conta1.Transferencia(conta2, 3500);
-
                 conta1.Sacar(45500);
+                conta1.Sacar(-65200);
 
 
             }
+            catch (ContaBancariaException ex)
+            {
+                Console.WriteLine(ex.Message);
+            } 
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);

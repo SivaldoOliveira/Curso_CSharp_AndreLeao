@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TrabalhandoComObjetos
 {
-    internal class Cliente
+    class Cliente
     {
         public string Nome { get; set; }
         public string Email { get; set; }

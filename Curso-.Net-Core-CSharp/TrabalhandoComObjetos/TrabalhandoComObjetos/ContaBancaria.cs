@@ -46,20 +46,25 @@ namespace TrabalhandoComObjetos
         {
             if (valor <= 0)
             {
-                throw new Exception("Depósito não foi realizado, verifique o valor para depósito.");
+                var msg = "Depósito não foi realizado, verifique o valor para depósito.";
+                throw new ContaBancariaException(msg);
             }
             Saldo += valor;
         }
        
         public bool Sacar(double valor)
         {
+            var msg = string.Empty;
+
             if (valor > Saldo)
             {
-                throw new Exception("Saque não foi realizado, valor superior ao disponivel em conta.");
+                msg = "Saque não foi realizado, valor superior ao disponivel em conta.";
+                throw new ContaBancariaException(msg);
             }
             if (valor <= 0)
             {
-                throw new Exception("Saque não foi realizado, valor deve ser maior que zero.");
+                msg = "Saque não foi realizado, valor deve ser maior que zero.";
+                throw new ContaBancariaException(msg);
             }
             
                 Saldo -= valor;
@@ -69,11 +74,14 @@ namespace TrabalhandoComObjetos
 
         public void Transferencia(ContaBancaria conta, double valor)
         {
-            var saqueRealizado = this.Sacar(valor);
-            if (saqueRealizado)
+            var saqueFoiRealizado = this.Sacar(valor);
+
+            if (!saqueFoiRealizado)
             {
-                conta.Depositar(valor);
+               var  msg = "Saque não foi realizado, valor deve ser maior que zero.";
+                throw new ContaBancariaException(msg);
             }
+            conta.Depositar(valor);
         }
 
         public double ExibirExtrato()
