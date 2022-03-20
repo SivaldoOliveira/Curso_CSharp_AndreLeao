@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ExemploComHeranca
 {
@@ -11,12 +7,14 @@ namespace ExemploComHeranca
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Fone { get; set; }
+        public DateTime DataNascimento{ get; set; }
 
-        public Pessoa( string nome, string email, string fone)
-        {
+
+        public Pessoa(string nome, string email, string fone)
+       {
             Nome = nome;
             Email = email;
-            Fone = fone;
+           Fone = fone;
         }
 
         public string ExibirInformacoes()
