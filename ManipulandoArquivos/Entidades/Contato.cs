@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TrabalhandoComNamespaces.Entidades
+namespace ManipulandoArquivos.Entidades
 {
-    public class Contato
+   public  class Contato
     {
-        public int Id { get; set; }
-
+        public int Codigo    { get; set; }
         public string Nome { get; set; }
-
         public string Email { get; set; }
+        public string Fone{ get; set; }
 
     }
 }

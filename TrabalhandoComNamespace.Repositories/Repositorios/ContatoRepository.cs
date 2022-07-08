@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using TrabalhandoComNamespaces.Entidades;
+using TrabalhandoComNamespaces.Domain.Entidades;
 
-namespace TrabalhandoComNamespaces.Repositorios
+namespace TrabalhandoComNamespace.Repositories.Repositorios
 {
-    class ContatoRepository
+    public class ContatoRepository
     {
         private List<Contato> _contatos;
 
@@ -19,10 +19,10 @@ namespace TrabalhandoComNamespaces.Repositorios
             _contatos.Add(contato);
         }
 
-        public void Remover(int id)
+        public void Remover(string id)
         {
-           var itemParaRemover =  _contatos.First(c => c.Id == id);
-            if (itemParaRemover != null) 
+            var itemParaRemover = _contatos.First(c => c.Id == id);
+            if (itemParaRemover != null)
             {
                 _contatos.Remove(itemParaRemover);
             }

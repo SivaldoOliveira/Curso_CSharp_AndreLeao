@@ -11,6 +11,8 @@ git push -u origin master(main) > enviando para o repositório remoto
 ctrl+k+d > indentação do codigo.
 F11 entra no detalhes debugando
 
+TrabalhandoComNamespace.Repositories
+
 13/01/2022 
 Aula 07
 Aula 08
@@ -31,3 +33,4 @@ Aula 22 20/03/2022
 Aula 23 04/07/2022
 Aula 24 05/07/2022
 Aula 25 05/07/2022
+Aula 26 06/07/2022

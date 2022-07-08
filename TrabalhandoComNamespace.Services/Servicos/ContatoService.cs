@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using TrabalhandoComNamespaces.Entidades;
-using TrabalhandoComNamespaces.Repositorios;
+using TrabalhandoComNamespace.Repositories.Repositorios;
+using TrabalhandoComNamespaces.Domain.Entidades;
 
-namespace TrabalhandoComNamespaces.Servicos
+namespace TrabalhandoComNamespace.Services.Servicos
 {
     public class ContatoService
     {
@@ -19,12 +19,12 @@ namespace TrabalhandoComNamespaces.Servicos
             _contatoRepository.adicionar(contato);
         }
 
-    public void Remover(int id)
+        public void Remover(string id)
         {
             _contatoRepository.Remover(id);
         }
 
-        public List<Contato>Listar()
+        public List<Contato> Listar()
         {
             return _contatoRepository.Listar();
         }

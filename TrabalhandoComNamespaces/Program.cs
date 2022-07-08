@@ -1,6 +1,7 @@
 ﻿using System;
-using TrabalhandoComNamespaces.Entidades;
-using TrabalhandoComNamespaces.Servicos;
+using TrabalhandoComNamespace.Services.Servicos;
+using TrabalhandoComNamespaces.Domain.Entidades;
+
 
 namespace TrabalhandoComNamespaces
 {
@@ -12,7 +13,7 @@ namespace TrabalhandoComNamespaces
 
             var contato = new Contato();
 
-            contato.Id = 01;
+          
             contato.Nome = "Sivaldo";
             contato.Email = "sival@hotmail";
 
