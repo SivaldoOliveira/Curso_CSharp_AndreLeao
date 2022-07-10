@@ -49,5 +49,25 @@ namespace ManipulandoArquivos.Util
 
             return contatos;
         }
+
+        public void GravarEmArquivo(List<Contato> contatos)
+        {
+            var diretorioDoArquivo = @"c:\temp\";
+            var nomeDoArquivo = "agenda.txt";
+            var caminhoCompletoDoArquivo = $"{diretorioDoArquivo}{nomeDoArquivo}";
+
+            var arquivo = new StreamWriter(caminhoCompletoDoArquivo);
+
+            arquivo.WriteLine("Nome; Email");
+
+            foreach (var item in contatos)
+            {
+                var linha = $"{item.Nome};{item.Email}";
+                arquivo.WriteLine(linha);
+            }
+
+            arquivo.Close();
+        }
+
     }
 }

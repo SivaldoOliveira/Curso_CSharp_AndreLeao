@@ -24,6 +24,9 @@ namespace ManipulandoArquivos
             }
             var gerenciadorArquivos = new GerenciadorDeArquivos();
             var contatos = gerenciadorArquivos.ExtrairContatos();
+
+
+            gerenciadorArquivos.GravarEmArquivo(contatos);
         }
     }
 }
