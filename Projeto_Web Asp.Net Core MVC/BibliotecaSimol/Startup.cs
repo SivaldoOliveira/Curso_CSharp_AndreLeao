@@ -1,3 +1,7 @@
+using BibliotecaSimol.Models.Contracts.Repositories;
+using BibliotecaSimol.Models.Contracts.Services;
+using BibliotecaSimol.Models.Repositories;
+using BibliotecaSimol.Models.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +28,9 @@ namespace BibliotecaSimol
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddScoped<ILivroRepository, LivroRepository>();
+            services.AddScoped<ILivroService, LivroService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
