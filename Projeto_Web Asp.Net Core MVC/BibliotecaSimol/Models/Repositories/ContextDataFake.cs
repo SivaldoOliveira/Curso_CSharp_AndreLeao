@@ -33,6 +33,9 @@ namespace BibliotecaSimol.Models.Repositories
             livro = new LivroDto("Introdução a Programação com Python", "Nilo N. C. Menezes", "Novatec");
             Livros.Add(livro);
 
+            livro = new LivroDto(" Programação com Python", "Nilo  Menezes", "Novatec");
+            Livros.Add(livro);
+
         }
     }
 }
