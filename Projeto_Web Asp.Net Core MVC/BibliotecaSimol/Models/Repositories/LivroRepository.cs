@@ -27,6 +27,12 @@ namespace BibliotecaSimol.Models.Repositories
             ContextDataFake.Livros.Add(livro);
         }
 
+        public void Excluir (string id)
+        {
+            var ObjPesquisa = PesquisarPorId(id);
+            ContextDataFake.Livros.Remove(ObjPesquisa);
+        }
+
         public List<LivroDto> Listar()
         {
             var livros = ContextDataFake.Livros;
