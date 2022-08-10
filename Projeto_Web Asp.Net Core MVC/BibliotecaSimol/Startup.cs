@@ -1,3 +1,4 @@
+using BibliotecaSimol.Models.Contracts.Contexts;
 using BibliotecaSimol.Models.Contracts.Repositories;
 using BibliotecaSimol.Models.Contracts.Services;
 using BibliotecaSimol.Models.Repositories;
@@ -28,6 +29,7 @@ namespace BibliotecaSimol
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSingleton<IContextData, ContextDataFake>();
 
             services.AddScoped<ILivroRepository, LivroRepository>();
             services.AddScoped<ILivroService, LivroService>();
