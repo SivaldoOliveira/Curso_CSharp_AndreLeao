@@ -7,4 +7,10 @@ Aula 06 16/07/2022
 Aula 07 19/07/2022
 Aula 08 21/07/2022
 Aula 09 27/07/2022
-Aula 10 27/07/2022
+Aula 10 09/08/2022
+Aula 11 15/08/2022
+
+insert into livro (id, nome, autor, editora) values ('e088942f-292c-4f5d-b615-40fe2ec42b82','Desenvolvimento com C#', 'Mauria Almeida Silva', 'Editora Oliveira')
+insert into livro (id, nome, autor, editora) values ('f407072e-b8b8-4230-a098-ef84226dc5da','Dosenvovlvimento Web ASP. NET MVC', 'Giovana Almeida', 'Editora lua nova')
+insert into livro (id, nome, autor, editora) values ('e92fe114-0c0a-4db3-ac6a-6b90f9f56ed8','Aprendendo .Net Core', 'Leticia Almeida', 'Editora Lucas')
+insert into livro (id, nome, autor, editora) values ('df55f023-3129-4aa9-a679-b5fc3a1245d3','SQL Server Passo a Passo', 'Joao Silva', 'Editora Josias')
