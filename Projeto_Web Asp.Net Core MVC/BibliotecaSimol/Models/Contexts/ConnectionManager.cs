@@ -6,11 +6,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BibliotecaSimol.Models.Contracts.Repositories
+namespace BibliotecaSimol.Models.Contracts.Contexts
 {
     public class ConnectionManager : IConnectionManager
     {
-        private static string _connectionName = "biblioteca";
+        private static readonly string _connectionName = "biblioteca";
         private static SqlConnection connection = null;
 
         public ConnectionManager ( IConfiguration configuration)
